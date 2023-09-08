@@ -21,6 +21,8 @@
 
 .text-light-gray {
     color: #727272;
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 
 .section-title {
@@ -141,7 +143,27 @@ nav li a {
     color: #424242;
     margin: 10px 0;
 }
+.facts-title, .facts-info{
+    margin-bottom: 0px;
+}
 
+
+/*-----------------------
+    Sponsors section
+------------------------*/
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.sponsors-img-container img{
+    width: 165px;
+}
 
 /*------------------------
     Main Common Styles
@@ -151,6 +173,9 @@ main {
     max-width: 1160px;
     margin: 70px auto;
 }
+.features, .facts, .sponsors{
+    margin-top: 75px;
+}
 
 /*------------------------
     Responsive Styles
@@ -158,26 +183,42 @@ main {
 
 /* ---- For Small Device ---- */
 @media screen and (max-width: 576px) {
+    .facts,
+    .facts-card-container,
     header, .teams-content {
         padding: 20px;
     }
-
+    .sponsors-img-container,
+    .facts-card-container,
     nav, .teams-container {
         flex-direction: column;
     }
-
+    .facts-card-container{
+        gap: 15px;
+    }
     .teams-img-container {
         grid-template-columns: 1fr;
     }
+    
 }
 
 /* ---- For Medium Device ---- */
 @media screen and (min-width: 576px) and (max-width: 960px) {
+    .facts,
     header {
         padding: 50px;
     }
 
-    nav, .teams-container {
+    nav,
+    .sponsors-img-container,
+    .facts-card-container,
+    .teams-container 
+    {
         flex-direction: column;
+    }
+
+    .facts-card-container
+    {
+        gap: 20px;
     }
 }
